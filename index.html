@@ -6,17 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ufak Udoh | Front End Developer</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .welcome{
+            font-family: monospace;
+            margin: 0; 
+            width: 100%;
+            font-size: xx-large;
+             animation: transitionIn 3s; 
+        }
+        .landing-page{
+            background-color: rgb(224, 212, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            gap: 30px;
+            min-height: 100vh; 
+        }
+        .updown-arrow{
+            border-radius: 5px;
+            margin: 6px;
+            width: 40px;
+        }
+        .auto-type{
+            color: rgb(17, 3, 55);
+            font-weight: 400;
+            font-size: xx-large;
+        }
+        
+        @keyframes transitionIn {
+            from {
+                 opacity: 0;
+                 transform: translateY(-45deg);
+            }
+            
+            to {
+                 opacity: 1;
+                 transform: translateY(0);
+            }
+         }
+            </style>
    
 </head>
 <body>
+
+    <section class="welcome" id="welc">
+        <!--This section contains the code for the landing page-->
+        <section class="landing-page">
+           <div  class="landing-text">
+               <h1 style="color: orange; text-align: center;"> < <span class="auto-type"></span>/></h1>
+           </div>
+          <a href="#home"><div class="move-1"><img class="move" src="images/arrow.gif" alt="click me" width="50"></div></a>
+       </section>
+      <!-- End of Landing page section-->
+       </section>
+   
 
                     <!--DESKTOP NAVIGATION BAR-->
     <nav class="nav-bar" id="home">
         <a class="logo" style="text-decoration: none;" href="">&LeftAngleBracket;Ufak_Udoh/&RightAngleBracket;</a>
             <div class="nav-links">
-                <a class="link hidden-in-mobile" href="home.html">Home</a>
+                <a class="link hidden-in-mobile" href="#welc">Home</a>
                 <a class="link hidden-in-mobile" href="index.html">About</a>
-                <a class="link hidden-in-mobile" href="">Portfolio</a>
+                <a class="link hidden-in-mobile" href="https://github.com/udohufak" target="_blank">Portfolio</a>
             </div>
         <div style="display: flex; align-items: center;"><a href="#contact"><button class="connect hidden-in-mobile">contact</button></a>
             <a href="blue.html"><img src="Images/light.png" alt="" width="25" height="25" style="color: white; margin-left: 10px; margin-top: 5px;"></a>
@@ -28,7 +80,7 @@
             <div class="sub-nav-wrap hidden-in-desktop" id="subNav">
                 <div class="sub-nav hidden-in-desktop">
                     <div class="user-nav">
-                        <a href="home.html" class="sub-nav-link"> 
+                        <a href="#welc" class="sub-nav-link"> 
                             <p style="display: flex; flex-direction: row; gap: 90px;">HOME <span>&rightarrow;</span></p>  
                         </a>
 
@@ -36,7 +88,7 @@
                             <p style="display: flex; flex-direction: row; gap: 83px;">ABOUT <span>&rightarrow;</span></p> 
                         </a>
 
-                        <a href="" class="sub-nav-link">
+                        <a href="https://github.com/udohufak" target="_blank"></a>" class="sub-nav-link">
                             <p style="display: flex; flex-direction: row; gap: 40px;">PORTFOLIO <span>&rightarrow;</span></p>
                         </a>
 
@@ -187,6 +239,16 @@
                         subNav.classList.toggle("open-nav");
                     }
                     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+    var typed = new Typed (".auto-type", {strings: ["Ufak_Udoh", "Welcome to my Portfolio Website"],
+     typeSpeed:190,
+     backSpeed: 50,
+     loop: true
+     })
+</script>
                     
                    
            
