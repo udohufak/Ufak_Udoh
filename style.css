@@ -1,14 +1,15 @@
-body{
-    font-family: Times New Roman, Times, 'serif';
-    margin: 0;
-    animation: transitionIn 3s;
-}
-
 html{
     scroll-behavior: smooth;
 }
 
-/* Navigation Bar Styling */
+body{
+    font-family: Times New Roman, Times, 'serif';
+    margin: 0;
+    animation: opaqueIn 3s;
+}
+
+/* NAVIGATION BAR STYLING */
+
 .nav-bar{
     display: flex;
     flex-direction: row;
@@ -17,7 +18,7 @@ html{
     background-color: #050013;
     padding-block: 25px;
     padding-inline: 8vw;
-    }
+}
 
 .logo{
     color: orange;
@@ -25,28 +26,31 @@ html{
     font-size: xx-large;
     font-family: monospace;
 }
+
 .link{
     font-family: 'calibri', sans-serif;
     color: white;
     text-decoration: none;
-    line-height: 25px;
     font-size: 17px;
     font-weight: 600;
+    transition: all 0.5s ;
 }
+
 .link:hover{
     color:  orange;
-    transition: .3s;
     border-top: 2px solid white;
     padding-top: 2px;
     border-radius: 7%;
     font-weight: bold;
 }
+
 .nav-links{
     display: flex;
     gap: 100px;
 }
+
 .connect{
-    background: transparent;
+    background-color: transparent;
     border: 2px solid orange;
     border-radius: 30px;
     color: white;
@@ -55,21 +59,23 @@ html{
     font-family: Courier New, Courier, 'monospace';
     padding-inline: 28px;
     padding-block: 9px;
+    cursor: pointer;
+    transition: all 0.8s;
 }
+
 .connect:hover{
     background: orange;
-    color: white;
-    cursor: pointer;
-    transition: .8s;
     border: 2px solid rgb(255, 165, 0);
 }
+
 .lines{
     cursor: pointer;
 }
+
 .sub-nav-wrap{
     position: absolute;
     top: 81px;
-    right: 1px;
+    left: 0;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
@@ -77,17 +83,21 @@ html{
     overflow: hidden;
     transition: max-height 0.8s;   
 }
-.sub-nav-wrap.open-nav{
+
+.open-nav{
     max-height: 400px;
 }
+
 .sub-nav{
     background: white;
 }
+
 .user-nav{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 .sub-nav-link{
     display: flex;
     align-items: flex-start;
@@ -98,35 +108,43 @@ html{
     flex-direction: row;
     margin-left: 15px;   
 }
+
 .sub-nav-link p{
     width: 100%;
     padding-right: 550px;
 }
+
+.sub-nav-link:hover p{
+    font-weight: 600;
+    padding-top: 10px;
+    color: orange; 
+    transition: all .5s;
+}
+
 .sub-nav-link span{
     color: orange;
     transition: transform 0.5s;
 }
+
 .sub-nav-link:hover span{
-    transform: translate(5px);
+    transform: translateX(5px);
     color: #14004c;
 }
-.sub-nav-link:hover p{
-    font-weight: 600;
-    padding-top: 10px;
-    color: orange;
-    transition: .5s;    
-}
-/*Navigation Bar Styling End*/
 
-/*About Page Styling Start*/
 
-.about{
+/*NAVIGATION BAR STYLING/
+
+
+/*ABOUT PAGE STYLING*/
+
+.all-content{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/*Introduction Part Styling*/
+/*INTRODUCTION STYLING*/
+
 .hero{
     display: flex;
     flex-direction: row;
@@ -137,6 +155,15 @@ html{
     gap: 15%;
     background-color:#08001d ;
 }
+
+.intro{
+    border-left: 3px solid orange;
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 10%;
+    padding-block: 60px;
+    padding-left: 70px;
+}
+
 .cv{
    padding-block: 12px;
    background-color: orange;
@@ -147,39 +174,47 @@ html{
    font-weight: lighter;
    padding-inline: 50px;
    border-radius: 30px;
+   cursor: pointer;
+   transition: all 0.8s;
 }
 .cv:hover{
     background-color: transparent;
-    cursor: pointer;
-    color: white;
     border: 2px solid orange;
-    transition: .8s;
 }
-.intro{
-    border-left: 3px solid orange;
-    border-bottom-left-radius: 10%;
-    border-top-left-radius: 10%;
-    padding-block: 60px;
-    padding-left: 70px;
-}
-/*Introduction Styling End*/
+
+
+/*INTRODUCTION STYLING END*/
+
+/*WEB QUALITIES STYLING*/
 
 .qualities{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding-inline: 10vw;
     padding-top: 5px;
     gap: 100px;
-    background-color:#f2effa;
-}
-.lev{
-    font-family: serif;
+    background-color:rgb(242, 239, 250);
 }
 
-/*Contact Styling*/
-#submit{
+/*WEB QUALITIES SYLING END*/
+
+/*ABOUT PAGE STYLING END*/
+
+
+/*CONTACT STYLING*/
+
+.contactpage{
+    margin-block: 40px;
+    max-width: 1200px;
+    padding: 30px 10px;
+    width: 80vw;
+    box-shadow: 7px 5px 7px 5px #0b0126;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.submit{
     padding-inline: 25px; 
     padding-block: 8px;  
     background-color: transparent;
@@ -191,43 +226,27 @@ html{
     border-radius: 5px;
     cursor: pointer;
     font-size: large;
+    transition: all .8s;
 }
-#submit:hover{
+.submit:hover{
     background-color: orange;
-    transition: .8s;
 }
-/*Contact styling*/
+/*CONTACT STYLING END*/
 
-/*Footer Styling*/
-.ref{
-    margin-inline: 120px;
-    padding-bottom:30px;
-    padding-top:0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color:orange;
-}
+/*FOOTER STYLING*/
 .click{
-    background-color: transparent;
-    border-radius: 30px;
-}
-.click:hover{
-    transform: translate(15px);
-    color: #14004c;
-    transition: .5s;
-    cursor: pointer;
-    color: #14004c;
+    transition: transform .8s;
 }
 
-.click2:hover{
+.click:hover{
     transform: translateY(-10px);
     cursor: pointer;
-    transition: .8s;
 }
 footer{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
 }
 h1{
     font-size: xx-large;
@@ -237,22 +256,23 @@ h1{
     border-radius: 50%;
     padding: 5px;
 }
+.social:hover{
+    background-color:orange;
+    transition: 0.5s;
+}
 
-/*Footer Styling End*/
+
+/*FOOTER STYLING END*/
 
 
 
-
-
-@keyframes transitionIn {
+@keyframes opaqueIn {
     from {
-         opacity: 0;
-         transform: translateY(-45deg);
+         opacity: 0;      
     }
     
     to {
-         opacity: 1;
-         transform: translateY(0);
+         opacity: 1;      
     }
  }
 
@@ -263,6 +283,7 @@ h1{
     .hero{
         flex-wrap: wrap;
         padding-block: 20px;
+        flex-shrink: 20%;
     }
     .intro{
         border: none;
@@ -271,12 +292,18 @@ h1{
      .data{
         flex-wrap: wrap;
     }
-     .ref{
-        background-color: #0b0126;
-    }
     .right{
         gap: 100px;
     }
+    .cover{
+        width:400px;
+    }
+    .qual{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
 }
 @media (min-width: 1100px){
     .hidden-in-desktop {
@@ -285,18 +312,21 @@ h1{
 }
 @media (max-width: 520px){
     .cover{
-        height: 290px;
+        height: 300px;
     }
     .logo{
         font-size: x-large;
     }
-}
-@media (max-width: 2600px){
-    main{
-        min-height: 100vh;
-    }
-    .footer{
-        min-height: 20vh;
+    .hero, .qualities, .contactpage, footer, .nav-bar{
+        padding-inline: 40px;
+        margin-inline: none;
+        box-shadow: none;
     }
 }
+@media (max-width: 350px){
+    .hidden-social{
+        display: none;
+    }  
+}
+
 
